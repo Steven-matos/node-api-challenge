@@ -2,7 +2,6 @@ const express = require("express");
 const validateActionId = require("../middleware/validateActionId");
 
 const Action = require("./actionModel");
-const Project = require("../project/projectModel");
 
 const router = express.Router();
 

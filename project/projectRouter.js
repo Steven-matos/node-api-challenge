@@ -35,15 +35,17 @@ router.get("/:id", validateProjectId, (req, res) => {
 });
 
 router.get("/:id/actions", validateProjectId, (req, res) => {
-    Project.getProjectActions(req.project.id).then(actions => {
-        res.status(200).json(actions);
-    }).catch(error => {
-        console.log(error);
-        res.status(500).json({
-            errorMessage: "Failed to retrieve projects action list!"
-        })
+  Project.getProjectActions(req.project.id)
+    .then(actions => {
+      res.status(200).json(actions);
     })
-})
+    .catch(error => {
+      console.log(error);
+      res.status(500).json({
+        errorMessage: "Failed to retrieve projects action list!"
+      });
+    });
+});
 
 router.post("/", validateProject, (req, res) => {
   Project.insert(req.body)
