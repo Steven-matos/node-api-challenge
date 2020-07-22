@@ -40,13 +40,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+    the parts I learned was about validation middleware and also about express routers.
+
 - [ ] Describe Middleware?
+
+    a function that runs during the lifecycle of a request to the server.
 
 - [ ] Describe a Resource?
 
+    is what is the client uses when they access an API server. the resourses are acessed with endpoints that are created in the API server. 
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+    It returns a network status code of 200 that indicates that it was sucessful.
+
 - [ ] How can we partition our application into sub-applications?
+
+    you can partition it by not writting the entire server in one server.js file. instead you would break it up into different route folders.
 
 ## Minimum Viable Product
 
